@@ -5,11 +5,10 @@
   "author": "StudioYou",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./api/server.js --exec babel-node"
+    "start": "nodemon ./api/server.js --exec ./node_modules/.bin/babel-node"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/preset-env": "^7.0.0",
     "boom": "^7.2.0",
     "hapi": "^17.5.4",
     "joi": "^13.6.0",
@@ -19,7 +18,11 @@
   },
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/node": "^7.22.19"
   }
 }
